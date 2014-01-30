@@ -26,7 +26,7 @@ ul span				{	color: #696969 }
 						text-align: center; margin-bottom: 30px; margin-top: 10px; color: black;}
 						
 						
-.formheader			{	/*text-align: left;*/ }
+.formheader			{	text-align: center;}
 .formheader p 		{ 	margin-bottom: 1em; }
 .formheader h2		{	font-size: 28px; margin-bottom: 30px; margin-top: 10px; color: #AFBF45;}
 .formheader h3		{	font: normal 22px "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
@@ -40,6 +40,17 @@ ul span				{	color: #696969 }
 .advance p			{	display: block; margin: 0px;}
 
 
+#previousarrow			{   float: left; margin-left: 10px; text-align: left; border: 1px solid #AFBF45; color: #686868;
+						box-shadow:0 0 1px #AFBF45;-moz-box-shadow:0 0 1px #AFBF45;-webkit-box-shadow:0 0 1px #AFBF45;}
+#nextarrow			{   float: right; margin-right: 10px; text-align: left; border: 1px solid #AFBF45; color: #686868;
+						box-shadow:0 0 1px #AFBF45;-moz-box-shadow:0 0 1px #AFBF45;-webkit-box-shadow:0 0 1px #AFBF45;}
+#previousarrow:hover, #nextarrow:hover	{ color: #AFBF45}
+
+
+button:hover		{	background: white	}
+button:hover		{   background: #686868; color: #AFBF45}
+button:hover h2		{   background: #686868; color: #AFBF45}
+
 
 .textfield_container {height: 400px; width: 1100px;}
 .textfield_container input {width: 300px;}
@@ -48,7 +59,7 @@ ul span				{	color: #696969 }
 
 .chaptertitle 		{   font-weight: bold; color: #686868}
 .chaptertitle:hover {   color:#AFBF45}
+.sectiontitle		{	font-weight: bold; color: #AFBF45}
 
-button:hover		{	background: white	}
-button:hover		{   background: #686868; color: #AFBF45}
-button:hover h2		{   background: #686868; color: #AFBF45}
+
+.time				{	margin-left: 50px; font-weight: bold;	width: 200px;display: inline-block;}

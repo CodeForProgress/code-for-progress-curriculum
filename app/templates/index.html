@@ -8,12 +8,15 @@
 		{% for w in weeks %}
 		{% if w == 1 %}
 		<br>
+
 		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{title[w-1]}}</p></a>
 		<div class="slidingDiv">
 			<ul>
+
 			{% for i in [1,2,3,4,5] %}
-				<li>Day {{i}} - <span class="lessontitle">{{week1lessontitles[i-1]}}</span></li>
+				<li><a href="{{ url_for('lesson', shortcode = i) }}"> Day {{i}} - <span class="lessontitle">{{week1lessontitles[i-1]}}</span></a></li>		
 			{% endfor %}
+
 			</ul>
 		<a href="#1" class="show_hide"><b>(Hide this week)<br></b><br></a>		
 		</div>
@@ -26,13 +29,7 @@
 		</div>
 
 
-
-
-
-
-
 <a href="http://apply.codeforprogress.org/staffview">
-	</div>
 	<button class="advance"><h2>DONE HERE!</h2><p>Return to staffview</p></button>
 </a>
 

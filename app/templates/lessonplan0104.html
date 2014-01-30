@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<button id = "previousarrow" onClick="location.href ='{{ url_for('lesson', shortcode = 3) }}'"> < Previous lesson</button>
+<button id = "nextarrow" onClick="location.href ='{{ url_for('lesson', shortcode = 5) }}'">Next lesson > </button>
+<br><br>
+
+	<div class="contentholder">
+		<div class="formheader">
+			<h2>Our Compañeros: Meeting our larger community of support</h2>
+			<p>Lesson Plan - Week 1, Day {{shortcode}}</p>
+			<p><b>Projected date</b>: Thursday April 14, 2014
+			<br><b>Instructor(s)</b>: Fox, Rahman, Wiggins</p>
+			<br><br>
+		</div>
+
+		<p class="sectiontitle">Learning outcomes</p>
+			<ul>
+				<li><span>Learn stuff</span></li>		
+			</ul><br>
+
+		<p class="sectiontitle">Prep required before start of lesson</p>
+			<ul>
+				<li><span>Remind students to bring their show-and-tell object/photo from home</span></li>			
+				<li><span>Load software onto computers<span></li>
+			</ul><br>
+
+
+		<p class="sectiontitle">Materials to bring (instructional team)</p>
+			<p><i>Note that whiteboards, easel pads, markers, projector, and screen should be in place for all lessons</i></p>
+			<ul>
+				<li><span>Student computers(10)</span></li>
+				<li><span>USB drives (10)</span></li>
+				<li><span>Course text (10 copies)</span></li>
+			</ul><br>
+
+		<p class="sectiontitle">Materials to bring (participants)</p>
+			<p><i>Note that participants should bring their computers, USB drives, notebooks, and course text every day</i></p>
+			<ul>
+				<li><span>Show-and-tell object/photo from home</span></li>
+			</ul><br>
+			
+			
+		<p class="sectiontitle">Annotated schedule</p>
+			<p><div class="time">9am-noon</div>Fun</p>
+			<p><div class="time">noon-1:30pm</div>Lunch</p>
+			<p><div class="time">1:30pm-5pm</div>Fun</p>
+			<br>		
+
+
+<a href="{{url_for('index')}}">
+	</div>
+	<button class="advance"><h2>BACK</h2><p>To Table of Contents</p></button>
+</a>
+
+{% endblock %}
