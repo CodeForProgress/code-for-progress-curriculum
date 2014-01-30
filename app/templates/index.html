@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="contentholder">
+		<div class="formheader"><h2>Lesson Plans: Code for Progress 2014 class</h2></div>	
+			{% for w in weeks %}
+				<p class="chaptertitle">Week {{w}}</p>	
+			{% endfor %}
+		</div>
+
+<a href="http://apply.codeforprogress.org/staffview">
+	</div>
+	<button class="advance"><h2>DONE HERE!</h2><p>Return to staffview</p></button>
+</a>
+
+{% endblock %}
