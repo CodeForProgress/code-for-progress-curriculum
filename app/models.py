@@ -32,6 +32,7 @@ class User(db.Model):
 class LessonPlan(db.Model):
 	week = db.Column(db.Integer)
 	day = db.Column(db.Integer)
+	shortcode = db.Column(db.String) #i.e. Lesson 5 on Week 3 is 03-05
 	projectedDate = db.Column(db.String(20))
 	instructors = db.Column(db.String(200), default = "Aliya")
 	learningOutcomes = db.Column(db.Text)

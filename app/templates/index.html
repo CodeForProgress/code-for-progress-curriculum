@@ -4,10 +4,32 @@
 
 	<div class="contentholder">
 		<div class="formheader"><h2>Lesson Plans: Code for Progress 2014 class</h2></div>	
-			{% for w in weeks %}
+
+		{% for w in weeks %}
+		{% if w == 1 %}
+		<br>
+		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{title[w-1]}}</p></a>
+		<div class="slidingDiv">
+			<ul>
+			{% for i in [1,2,3,4,5] %}
+				<li>Day {{i}} - <span class="lessontitle">{{week1lessontitles[i-1]}}</span></li>
+			{% endfor %}
+			</ul>
+		<a href="#1" class="show_hide"><b>(Hide this week)<br></b><br></a>		
+		</div>
+	
+			{% else %}
 				<p class="chaptertitle">Week {{w}}</p>	
+
+			{% endif %}
 			{% endfor %}
 		</div>
+
+
+
+
+
+
 
 <a href="http://apply.codeforprogress.org/staffview">
 	</div>
