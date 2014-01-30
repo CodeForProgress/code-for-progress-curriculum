@@ -49,5 +49,6 @@ ul span				{	color: #696969 }
 .chaptertitle 		{   font-weight: bold; color: #686868}
 .chaptertitle:hover {   color:#AFBF45}
 
+button:hover		{	background: white	}
 button:hover		{   background: #686868; color: #AFBF45}
 button:hover h2		{   background: #686868; color: #AFBF45}
