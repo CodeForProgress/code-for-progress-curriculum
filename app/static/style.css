@@ -63,3 +63,4 @@ button:hover h2		{   background: #686868; color: #AFBF45}
 
 
 .time				{	margin-left: 50px; font-weight: bold;	width: 200px;display: inline-block;}
+.activity			{	display: inline-block; width: 700px; vertical-align: top;}

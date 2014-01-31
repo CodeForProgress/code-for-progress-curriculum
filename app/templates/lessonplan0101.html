@@ -16,12 +16,22 @@
 		</div>
 
 		<p class="sectiontitle">Learning outcomes</p>
+			<p>After this lesson, participants will be able to:
 			<ul>
-				<li><span>Learn stuff</span></li>		
+				<li><span>Narrate how personal experiences and community identities brought them to this course, and describe what they want it to mean for their individual and communities' futures</span></li>
+				<li><span>Identify a social issue that affects people close to them, and discuss its race/class/gender/citizenship/sexuality/ability implications</span></li>
+				<li><span>Describe how that issue might be addressed through technology that helps to build or transfer power</span></li>
+				<li><span>Explain course goals, expectations, and format</span></li>
+				<li><span>Sign into their codeforprogress.org email account and send an email with an attached photo</span></li>		
+				<li><span>Create an integer variable and a string variable</li>
+				<li><span>Store, replace, and add together integer and string variables (no lists or tuples yet)</span></li>
 			</ul><br>
+
+
 
 		<p class="sectiontitle">Prep required before start of lesson</p>
 			<ul>
+				<li><span>SmarTRIP cards, Metro intro, housing/here's-the-grocery-store conversations and work needs to be done before this so students can get to class<span></li>
 				<li><span>Remind students to bring their show-and-tell object/photo from home</span></li>			
 				<li><span>Load software onto computers<span></li>
 			</ul><br>
@@ -43,15 +53,23 @@
 			
 			
 		<p class="sectiontitle">Annotated schedule</p>
-			<p><div class="time">9am-noon</div>Fun</p>
-			<p><div class="time">noon-1:30pm</div>Lunch</p>
-			<p><div class="time">1:30pm-5pm</div>Fun</p>
-			<br>		
+			<p><div class="time">8:30am-9:00am</div><div class="activity">Arrive, get coffee, hang out and informally meet each other</div></p>
+			<p><div class="time">9:00am-9:15am</div><div class="activity">Kick off and overview today's agenda</div></p>
+			<p><div class="time">9:15am-10am</div><div class="activity">Do Now Exercise: Introductions and show-and-tell on "Why me and why now?" item</div></p>
+			<p><div class="time">10am-10:45am</div><div class="activity">Social issues dive: Activity on picking a specific social issue and visioning their creative tech solution (may build on the ideas participants submitted in their applications).</div></p>
+			<p><div class="time">10:45am-11am</div><div class="activity">Break</div></p>
+			<p><div class="time">11am-noon</div><div class="activity">What are these four months going to look like? Question-writing activity on course schedule and expectations</div></p>
+			<p><div class="time">noon-1:30pm</div><div class="activity">Lunch and hang out together (and answer pressing questions)</div></p>
+			<p><div class="time">1:30-2:30pm</div><div class="activity">Get computers, send an email from our Code for Progress accounts</div></p>
+			<p><div class="time">2:30-3:30pm</div><div class="activity">Exercise: What's a variable and how do we use it? Thinking of some social justice variables in English or Spanish, then typing them in Python!</div></p>
+			<p><div class="time">3:30pm-4:30pm</div><div class="activity">Life, basic needs (more-than-basic are tomorrow), and operations planning with Managing Director</div></p>
+			<p><div class="time">4:30pm-5pm</div><div class="activity">Closeout exercise and recap for tomorrow's 9am start</div></p>
+			<br>
 
-
+<br>
+<button id = "nextarrow" onClick="location.href ='{{ url_for('lesson', shortcode = 2) }}'"> Next lesson > </button>
+</div><br><br><br>
 <a href="{{url_for('index')}}">
-	</div>
 	<button class="advance"><h2>BACK</h2><p>To Table of Contents</p></button>
 </a>
-
 {% endblock %}

@@ -8,7 +8,7 @@
 
 	<div class="contentholder">
 		<div class="formheader">
-			<h2>Our Compañeros: Meeting our larger community of support</h2>
+			<h2>Our Compañeros: The people we build for and our larger community of support</h2>
 			<p>Lesson Plan - Week 1, Day {{shortcode}}</p>
 			<p><b>Projected date</b>: Thursday April 14, 2014
 			<br><b>Instructor(s)</b>: Fox, Rahman, Wiggins</p>
@@ -16,41 +16,52 @@
 		</div>
 
 		<p class="sectiontitle">Learning outcomes</p>
+			<p>After this lesson, participants will be able to:
 			<ul>
-				<li><span>Learn stuff</span></li>		
+				<li><span>Describe the mission of three social justice organizations and the roles of one staff person at each</span></li>	
+				<li><span>Write "user stories" for a digital social justice tool that we have already thought about</span></li>
+				<li><span>Set up a GitHub account, make a repository, and explain what they both are to a non-coder</span></li>
+				<li><span>Push a document (our "user stories") to Github</span></li>	
 			</ul><br>
 
 		<p class="sectiontitle">Prep required before start of lesson</p>
 			<ul>
-				<li><span>Remind students to bring their show-and-tell object/photo from home</span></li>			
-				<li><span>Load software onto computers<span></li>
+				<li><span>Prep guest techies/organizers/managers</span></li>			
+				<li><span>Party logistics</span></li>			
+				<li><span>Party invites, reminders, photos</span></li>
+				<li><span>Set up class common Git repo</span></li>							
 			</ul><br>
 
 
 		<p class="sectiontitle">Materials to bring (instructional team)</p>
 			<p><i>Note that whiteboards, easel pads, markers, projector, and screen should be in place for all lessons</i></p>
 			<ul>
-				<li><span>Student computers(10)</span></li>
-				<li><span>USB drives (10)</span></li>
-				<li><span>Course text (10 copies)</span></li>
+				<li><span>Examples of tech that run on code</span></li>
 			</ul><br>
 
 		<p class="sectiontitle">Materials to bring (participants)</p>
 			<p><i>Note that participants should bring their computers, USB drives, notebooks, and course text every day</i></p>
 			<ul>
-				<li><span>Show-and-tell object/photo from home</span></li>
+				<li><span>No special participant materials for this lesson.</span></li>
 			</ul><br>
 			
 			
 		<p class="sectiontitle">Annotated schedule</p>
-			<p><div class="time">9am-noon</div>Fun</p>
-			<p><div class="time">noon-1:30pm</div>Lunch</p>
-			<p><div class="time">1:30pm-5pm</div>Fun</p>
+			<p><div class="time">9am-9:15am</div><div class="activity">Start and overview today's schedule</div></p>
+			<p><div class="time">9:15am-9:30am</div><div class="activity">Do Now Exercise: Write a "user story" for riding a bike</div></p>
+			<p><div class="time">9:30am-10:15am</div><div class="activity">In groups, write user stories for a social justice digital tool idea that we discussed on Tuesday</div></p>	
+			<p><div class="time">10:30-noon</div><div class="activity">Discussion on organizations and staff roles with guest staff from the movement</div></p>			
+			<p><div class="time">noon-1:45pm</div><div class="activity">Make Github accounts, push a user story .txt file to it and to the common repository</div></p>
+			<p><div class="time">1:45pm-2pm</div><div class="activity">Recap and heads up on party, remind about doing our videos and pictures tomorrow (so you can dress cute if you wanna!)</div></p>
+			<p><div class="time">2pm-4pm</div><div class="activity">Free time/get ready for party</div></p>
+			<p><div class="time">4pm-7pm</div><div class="activity">Party</div></p>
 			<br>		
 
-
+<br>
+<button id = "previousarrow" onClick="location.href ='{{ url_for('lesson', shortcode = 3) }}'"> < Previous lesson</button>
+<button id = "nextarrow" onClick="location.href ='{{ url_for('lesson', shortcode = 5) }}'"> Next lesson > </button>
+</div><br><br><br>
 <a href="{{url_for('index')}}">
-	</div>
 	<button class="advance"><h2>BACK</h2><p>To Table of Contents</p></button>
 </a>
 
