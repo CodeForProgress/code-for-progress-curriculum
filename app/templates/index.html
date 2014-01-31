@@ -9,7 +9,7 @@
 		{% if w == 1 %}
 		<br>
 
-		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{title[w-1]}}</p></a>
+		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{titles[w-1]}}</p></a>
 		<div class="slidingDiv">
 			<ul>
 
@@ -22,7 +22,7 @@
 		</div>
 	
 			{% else %}
-				<p class="chaptertitle">Week {{w}}</p>	
+				<p class="chaptertitle">Week {{w}}: {{titles[w-1]}}</p>	
 
 			{% endif %}
 			{% endfor %}
