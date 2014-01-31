@@ -10,7 +10,7 @@ def index():
 	title1= "Radical Welcomings"
 	title2= "Grassroots and Building Blocks"
 	title3= "Doors and Phones and Code and Power"
-	title4= "Code for Ordinary People... Take It Slow"
+	title4= "Code for Ordinary People... (Take It Slow)"
 	title5= "Fast and Furious Data-Driving"
 	title6= "Who runs the world? urls."
 	title7= "No More Drama"
