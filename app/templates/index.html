@@ -8,13 +8,12 @@
 		{% for w in weeks %}
 		{% if w == 1 %}
 		<br>
-
 		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{titles[w-1]}}</p></a>
 		<div class="slidingDiv">
 			<ul>
 
 			{% for i in [1,2,3,4,5] %}
-				<li><a href="{{ url_for('lesson', shortcode = i) }}"> Day {{i}} - <span class="lessontitle">{{week1lessontitles[i-1]}}</span></a></li>		
+				<li><a href="{{ url_for('lesson', shortcode = "01-03") }}"> <span class="lessontitle">Day {{i}} - {{week1lessontitles[i-1]}}</span></a></li>		
 			{% endfor %}
 
 			</ul>

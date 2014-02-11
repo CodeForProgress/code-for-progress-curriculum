@@ -40,27 +40,32 @@ ul span				{	color: #696969 }
 .advance p			{	display: block; margin: 0px;}
 
 
-#previousarrow			{   float: left; margin-left: 10px; text-align: left; border: 1px solid #AFBF45; color: #686868;
-						box-shadow:0 0 1px #AFBF45;-moz-box-shadow:0 0 1px #AFBF45;-webkit-box-shadow:0 0 1px #AFBF45;}
-#nextarrow			{   float: right; margin-right: 10px; text-align: left; border: 1px solid #AFBF45; color: #686868;
-						box-shadow:0 0 1px #AFBF45;-moz-box-shadow:0 0 1px #AFBF45;-webkit-box-shadow:0 0 1px #AFBF45;}
-#previousarrow:hover, #nextarrow:hover	{ color: #AFBF45}
+#navbuttonholder	{	text-align: center;}
+#previousarrow, #nextarrow, #editbutton	{display: inline-block; border: 1px solid #AFBF45; color: #686868; text-align: center; box-shadow:0 0 1px #AFBF45;-moz-box-shadow:0 0 1px #AFBF45;-webkit-box-shadow:0 0 1px #AFBF45;}
+#previousarrow			{   float: left; margin-left: 10px}
+#nextarrow				{   float: right; margin-right: 10px}
+#editbutton				{   margin-left: -23px;}
+#previousarrow:hover, #nextarrow:hover, #editbutton:hover	{ color: #AFBF45}
 
 
 button:hover		{	background: white	}
 button:hover		{   background: #686868; color: #AFBF45}
 button:hover h2		{   background: #686868; color: #AFBF45}
 
-
-.textfield_container {height: 400px; width: 1100px;}
-.textfield_container input {width: 300px;}
-.col1		{display:inline-block; text-align:right;}
-.col2		{display: inline-block; text-align: right; margin-left: 50px; }
-
 .chaptertitle 		{   font-weight: bold; color: #686868}
 .chaptertitle:hover {   color:#AFBF45}
 .sectiontitle		{	font-weight: bold; color: #AFBF45}
 
-
-.time				{	margin-left: 50px; font-weight: bold;	width: 200px;display: inline-block;}
+.time				{	margin-left: 50px; font-weight: bold;	width: 200px; display: inline-block;}
 .activity			{	display: inline-block; width: 700px; vertical-align: top;}
+
+input[type="text"], textarea	{	font-size: 18px; width: 800px; border: dashed 2px #AFBF45; margin-left: 10px; padding: 2px; padding: 10px;}
+textarea	{	font-size: 18px; height: 100px; vertical-align: top;}
+#title input		{	font-size: 28px; color: #AFBF45; width: 800px;}
+.subtitle input		{ width: 300px;}
+#scheduleitem textarea, #scheduleitem input	{width: 590px; margin-bottom: 5px; background: #EDEFDE;}
+#scheduleitem textarea	{font-style: italic; font-weight: 100; background: white;}
+.time input			{	width: 150px; text-align: center;}
+#instructorbox		{	margin-left: 16px;	}
+
+.lessonheader		{text-align: center;}

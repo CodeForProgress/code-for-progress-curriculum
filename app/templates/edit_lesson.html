@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+	<div id = "navbuttonholder">
+		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
+		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+	</div>
+<br><br>
+<form action="" method="post" name="lessonplan" class="lessonplan">
+	{{form.hidden_tag()}}
+	<div class="contentholder">
+		<div class="formheader">
+			<h2><span id="title">Title: {{ form.title }}</span></h2>
+			<p style="font-size: 24px;">Lesson Plan - Week {{ lesson.week }}, Day {{lesson.day}} </p>
+			<div class = "subtitle">
+					<p><b>Projected date</b>:<span class="subtitle"> {{ form.projectedDate }}</span></p>
+					<p><b>Instructor(s)</b>:<span class="subtitle" id="instructorbox"> {{ form.instructors }} </span></p>
+					<br><br>
+			</div>
+		</div>
+
+		<p class="sectiontitle" style="font-size: 24px;">Learning outcomes</p>
+			<p>After this lesson, participants will be able to:
+			<ul>
+				<li><span>{{ form.learningOutcome1 }}</span></li>
+				<li><span>{{ form.learningOutcome2 }}</span></li>
+				<li><span>{{ form.learningOutcome3 }}</span></li>
+				<li><span>{{ form.learningOutcome4 }}</span></li>
+				<li><span>{{ form.learningOutcome5 }}</span></li>		
+				<li><span>{{ form.learningOutcome6 }}</span></li>
+				<li><span>{{ form.learningOutcome7 }}</span></li>
+				<li><span>{{ form.learningOutcome8 }}</span></li>
+				<li><span>{{ form.learningOutcome9 }}</span></li>
+				<li><span>{{ form.learningOutcome10 }}</span></li>
+			</ul><br>
+
+
+
+		<p class="sectiontitle" style="font-size: 24px;">Prep required before start of lesson</p>
+			<ul>
+				<li><span>{{ form.prep(maxlength=2000) }}<span></li>
+			</ul><br>
+
+
+		<p class="sectiontitle" style="font-size: 24px;">Materials to bring (instructional team)</p>
+			<p><i>Note that whiteboards, easel pads, markers, projector, and screen should be in place for all lessons</i></p>
+			<ul>
+				<li><span>{{ form.materials(maxlength=2000) }}<span></li>
+			</ul><br>
+
+		<p class="sectiontitle" style="font-size: 24px;">Materials to bring (participants)</p>
+			<p><i>Note that participants should bring their computers, USB drives, notebooks, and course text every day</i></p>
+			<ul>
+				<li><span>{{ form.participantMaterials(maxlength=2000) }}<span></li>
+			</ul><br>
+			
+			
+		<p class="sectiontitle" style="font-size: 24px;">Annotated schedule</p>
+			<p><div class="time">{{ form.time1 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity1 }} {{ form.activity1notes }}</div></div></p>
+			
+			<p><div class="time">{{ form.time2 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity2 }} {{ form.activity2notes }}</div></div></p>
+
+			<p><div class="time">{{ form.time3 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity3 }} {{ form.activity3notes }}</div></div></p>			
+
+			<p><div class="time">{{ form.time4 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity4 }} {{ form.activity4notes }}</div></div></p>	
+
+			<p><div class="time">{{ form.time5 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity5 }} {{ form.activity5notes }}</div></div></p>
+
+			<p><div class="time">{{ form.time6 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity6 }} {{ form.activity6notes }}</div></div></p>
+
+			<p><div class="time">{{ form.time7 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity7 }} {{ form.activity7notes }}</div></div></p>
+			
+			<p><div class="time">{{ form.time8 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity8 }} {{ form.activity8notes }}</div></div></p>
+			
+			<p><div class="time">{{ form.time9 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity9 }} {{ form.activity9notes }}</div></div></p>
+
+			<p><div class="time">{{ form.time10 }}</div><div class="activity"><div id="scheduleitem">{{ form.activity10 }} {{ form.activity10notes }}</div></div></p>												
+			<br>
+			
+		<p class="sectiontitle" style="font-size: 24px;">Trainer notes</p>
+			<ul>
+				<li><span>{{ form.trainernotes(maxlength=2000) }}<span></li>
+			</ul><br>
+
+<br>
+<!-- NEED CONTROL FLOW HERE -->
+	<div id = "navbuttonholder">
+		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
+		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+	</div>
+</div><br><br><br>
+<a href="{{url_for('index')}}">
+	<button type ="submit" class="advance"><h2>SAVE</h2><p>And view this lesson</p></button>
+</a>
+</form>
+{% endblock %}
