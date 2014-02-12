@@ -1,8 +1,23 @@
 from flask.ext.wtf import Form
 from app import db
 from models import User, LessonPlan
-from wtforms import TextField, TextAreaField, DateField, SelectField
+from wtforms import TextField, TextAreaField, DateField, SelectField, PasswordField
 from wtforms.validators import Required, Email, EqualTo, Length, ValidationError, Optional
+
+
+class LoginForm(Form):
+	email = TextField('email', validators = [Required(message="We need to know your email address.")])
+	password = PasswordField('password', validators = [Required(message="We need your password.")])
+
+	def validate_email(self, field):
+		user = self.get_user()
+		if user is None:
+			raise ValidationError('Invalid User')
+		if user.password != self.password.data:
+			raise ValidationError('Invalid Password')
+			
+	def get_user(self):
+		return db.session.query(User).filter_by(email=self.email.data).first()
 
 
 class LessonPlanForm(Form):

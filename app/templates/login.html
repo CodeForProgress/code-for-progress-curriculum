@@ -1,0 +1,36 @@
+{% extends "loginbase.html" %}
+{% block content %}
+
+	<div class="loginerror">
+		{% if form.errors %}
+		<p style="color:red">Looks like there's something missing:<br />
+			{% for field_name, field_errors in form.errors|dictsort if field_errors %}
+				{% for error in field_errors %}
+				<br /><span style="margin-left:15px">- {{ error }}</span>
+				{% endfor %}
+			{% endfor %}
+		</p>
+		{% endif %}
+	</div>
+
+	<div class="contentholder">
+
+	<h2>Log in to your Code for Progress learning account</h2>
+	</div>
+
+	<div id="loginbox">
+		<form action="" method="post" name="login">
+			{{form.hidden_tag()}}
+			<p><label for="username" id="username">Email</label>{{form.email}}</p>
+			<p><label for="password" id="password">Password</label>{{form.password}}</p>
+			<p><button type="submit" value="LOG IN">LOG IN</button>
+		</form>
+	</div>
+
+        <div>
+
+
+        </div>
+		
+{%endblock %}
+

@@ -23,7 +23,7 @@ class User(db.Model):
         return False
 
     def get_id(self):
-        return self.user_id
+        return unicode(self.id)
 
     def __unicode__(self):
         return self.email
