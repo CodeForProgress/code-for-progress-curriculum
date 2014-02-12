@@ -4,9 +4,10 @@
 
 <br>
 	<div id = "navbuttonholder">
-		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
+
+		{% if lesson.shortcode !="1-1" %}<button id = "previousarrow" onClick="location.href ='{{ url_for('lesson', shortcode = previouslesson.shortcode) }}'">  < Previous lesson </button>{% endif %}
 		<button id = "editbutton" onClick="location.href ='{{ url_for('edit_lesson', shortcode = lesson.shortcode) }}'"> Edit this lesson </button>
-		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+		{% if lesson.shortcode !="16-5" %}<button id = "nextarrow" onClick="location.href ='{{ url_for('lesson', shortcode = nextlesson.shortcode) }}'">Next lesson > </button>{% endif %}
 	</div>
 <br><br>
 
@@ -71,9 +72,9 @@
 <br>
 <!-- NEED CONTROL FLOW HERE -->
 	<div id = "navbuttonholder">
-		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
-		<button id = "editbutton" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'"> Edit this lesson </button>
-		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+	{% if lesson.shortcode !="1-1" %}<button id = "previousarrow" onClick="location.href ='{{ url_for('lesson', shortcode = previouslesson.shortcode) }}'">  < Previous lesson </button> {% endif %}
+		<button id = "editbutton" onClick="location.href ='{{ url_for('edit_lesson', shortcode = lesson.shortcode) }}'"> Edit this lesson </button>
+	{% if lesson.shortcode !="16-5" %}	<button id = "nextarrow" onClick="location.href ='{{ url_for('lesson', shortcode = nextlesson.shortcode) }}'">Next lesson > </button> {% endif %}
 	</div>
 </div><br><br><br>
 <a href="{{url_for('index')}}">

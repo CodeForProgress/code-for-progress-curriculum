@@ -33,10 +33,11 @@ class LessonPlan(db.Model):
 	__tablename__ = 'LessonPlan'
 	id = db.Column(db.Integer, primary_key=True)
 	title = db.Column(db.Text)
+	weektitle = db.Column(db.Text)
 	week = db.Column(db.Integer)
 	day = db.Column(db.Integer)
 	shortcode = db.Column(db.String) #i.e. Lesson 5 on Week 3 is 03-05
-	projectedDate = db.Column(db.String(20))
+	projectedDate = db.Column(db.String(40))
 	instructors = db.Column(db.String(200), default = "Rahman")
 	learningOutcome1 = db.Column(db.Text)
 	learningOutcome2 = db.Column(db.Text)

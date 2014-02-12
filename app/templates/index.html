@@ -4,30 +4,24 @@
 
 	<div class="contentholder">
 		<div class="formheader"><h2>Lesson Plans: Code for Progress 2014 class</h2></div>	
+			<br><br>
+			{% for w in range(0,16) %}
+			<a href="#" class="show_hide{{w+1}}"><p class ="chaptertitle">Week {{w+1}}: {{lessons[(w*5)+1].weektitle}}</p></a>
+			<div class="slidingDiv{{w+1}}">
+				<ul>
 
-		{% for w in weeks %}
-		{% if w == 1 %}
-		<br>
-		<a href="#1" class="show_hide"><p class ="chaptertitle">Week {{w}}: {{titles[w-1]}}</p></a>
-		<div class="slidingDiv">
-			<ul>
+					{% for lesson in lessons[((w*5)):((w*5)+5)] %}
+						<li><a href="{{ url_for('lesson', shortcode = lesson.shortcode) }}"> <span class="lessontitle">Day {{lesson.day}} - {{lesson.title}}</span></a></li>
+					{% endfor %}
 
-			{% for i in [1,2,3,4,5] %}
-				<li><a href="{{ url_for('lesson', shortcode = "01-03") }}"> <span class="lessontitle">Day {{i}} - {{week1lessontitles[i-1]}}</span></a></li>		
+				</ul>
+				<a href="#" class="show_hide{{w+1}}"><b>(Hide this week)<br></b><br></a>		
+			</div>
 			{% endfor %}
 
-			</ul>
-		<a href="#1" class="show_hide"><b>(Hide this week)<br></b><br></a>		
-		</div>
-	
-			{% else %}
-				<p class="chaptertitle">Week {{w}}: {{titles[w-1]}}</p>	
-
-			{% endif %}
-			{% endfor %}
 		</div>
 
-
+</div>
 <a href="http://apply.codeforprogress.org/staffview">
 	<button class="advance"><h2>DONE HERE!</h2><p>Return to staffview</p></button>
 </a>

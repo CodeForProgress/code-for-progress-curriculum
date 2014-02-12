@@ -4,10 +4,13 @@
 
 <br>
 	<div id = "navbuttonholder">
-		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
-		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+		{% if lesson.shortcode !="1-1" %}<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = previouslesson.shortcode) }}'">  < Previous lesson </button>{% endif %}
+		{% if lesson.shortcode !="16-5" %}<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = nextlesson.shortcode) }}'">Next lesson > </button> {% endif %}
 	</div>
+	
+	
 <br><br>
+
 <form action="" method="post" name="lessonplan" class="lessonplan">
 	{{form.hidden_tag()}}
 	<div class="contentholder">
@@ -85,14 +88,14 @@
 			</ul><br>
 
 <br>
-<!-- NEED CONTROL FLOW HERE -->
 	<div id = "navbuttonholder">
-		<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-01") }}'">  < Previous lesson </button>
-		<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = "01-03") }}'">Next lesson > </button>
+	{% if lesson.shortcode !="1-1" %}	<button id = "previousarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = previouslesson.shortcode) }}'"> < Previous lesson </button> {% endif %}
+	{% if lesson.shortcode !="16-5" %}	<button id = "nextarrow" onClick="location.href ='{{ url_for('edit_lesson', shortcode = nextlesson.shortcode) }}'">Next lesson > </button>{% endif %}
 	</div>
+
+
 </div><br><br><br>
-<a href="{{url_for('index')}}">
-	<button type ="submit" class="advance"><h2>SAVE</h2><p>And view this lesson</p></button>
-</a>
+	<button type ="submit" class="advance"><h2>SAVE</h2><p>And return to contents</p></button>
 </form>
+
 {% endblock %}
