@@ -23,12 +23,14 @@ def login():
 
 @app.route('/', methods= ['GET', 'POST'])
 @app.route('/index', methods= ['GET', 'POST'])
+@login_required
 def index():
 	lessons = LessonPlan.query.order_by("week").order_by("day").all()
 	return render_template("index.html", lessons = lessons)
 
 
 @app.route('/lesson/<shortcode>', methods = ['GET', 'POST'])
+@login_required
 def lesson(shortcode):
 	lesson = LessonPlan.query.filter_by(shortcode = shortcode).first()
 	nextlesson = LessonPlan.query.get(lesson.id+1)
@@ -37,6 +39,7 @@ def lesson(shortcode):
 
 
 @app.route('/edit_lesson/<shortcode>', methods = ['GET', 'POST'])
+@login_required
 def edit_lesson(shortcode):
 	lesson = LessonPlan.query.filter_by(shortcode = shortcode).first()
 	nextlesson = LessonPlan.query.get(lesson.id+1)
