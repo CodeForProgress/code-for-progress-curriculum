@@ -23,16 +23,16 @@
 		<p class="sectiontitle">Learning outcomes</p>
 			<p>After this lesson, participants will be able to:
 			<ul>
-				<li><span>{{ lesson.outcome1 }}</span></li>
-				<li><span>{{ lesson.outcome2 }}</span></li>
-				<li><span>{{ lesson.outcome3 }}</span></li>
-				<li><span>{{ lesson.outcome4 }}</span></li>
-				<li><span>{{ lesson.outcome5 }}</span></li>		
-				<li><span>{{ lesson.outcome6 }}</span></li>
-				<li><span>{{ lesson.outcome7 }}</span></li>
-				<li><span>{{ lesson.outcome8 }}</span></li>
-				<li><span>{{ lesson.outcome9 }}</span></li>
-				<li><span>{{ lesson.outcome10 }}</span></li>
+				<li><span>{{ lesson.learningOutcome1 }}</span></li>
+				{% if lesson.learningOutcome2 %}<li><span>{{ lesson.learningOutcome2 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome3 %}<li><span>{{ lesson.learningOutcome3 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome4 %}<li><span>{{ lesson.learningOutcome4 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome5 %}<li><span>{{ lesson.learningOutcome5 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome6 %}<li><span>{{ lesson.learningOutcome6 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome7 %}<li><span>{{ lesson.learningOutcome7 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome8 %}<li><span>{{ lesson.learningOutcome8 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome9 %}<li><span>{{ lesson.learningOutcome9 }}</span></li>{% endif %}
+				{% if lesson.learningOutcome10 %}<li><span>{{ lesson.learningOutcome10 }}</span></li>{% endif %}
 			</ul><br>
 
 
@@ -57,16 +57,16 @@
 			
 			
 		<p class="sectiontitle">Annotated schedule</p>
-			<p><div class="time">{{ lesson.time1 }}</div><div class="activity">{{ lesson.activity1 }}</div></p>
-			<p><div class="time">{{ lesson.time2 }}</div><div class="activity">{{ lesson.activity2 }}</div></p>
-			<p><div class="time">{{ lesson.time3 }}</div><div class="activity">{{ lesson.activity3 }}</div></p>
-			<p><div class="time">{{ lesson.time4 }}</div><div class="activity">{{ lesson.activity4 }}</div></p>
-			<p><div class="time">{{ lesson.time5 }}</div><div class="activity">{{ lesson.activity5 }}</div></p>
-			<p><div class="time">{{ lesson.time6 }}</div><div class="activity">{{ lesson.activity6 }}</div></p>
-			<p><div class="time">{{ lesson.time7 }}</div><div class="activity">{{ lesson.activity7 }}</div></p>
-			<p><div class="time">{{ lesson.time8 }}</div><div class="activity">{{ lesson.activity8 }}</div></p>
-			<p><div class="time">{{ lesson.time9 }}</div><div class="activity">{{ lesson.activity9 }}</div></p>
-			<p><div class="time">{{ lesson.time10 }}</div><div class="activity">{{ lesson.activity10 }}</div></p>
+			{% if lesson.time1 %}<p><div class="time">{{ lesson.time1 }}</div><div class="activity">{{ lesson.activity1 }}</div></p>{% endif %}
+			{% if lesson.time2 %}<p><div class="time">{{ lesson.time2 }}</div><div class="activity">{{ lesson.activity2 }}</div></p>{% endif %}
+			{% if lesson.time3 %}<p><div class="time">{{ lesson.time3 }}</div><div class="activity">{{ lesson.activity3 }}</div></p>{% endif %}
+			{% if lesson.time4 %}<p><div class="time">{{ lesson.time4 }}</div><div class="activity">{{ lesson.activity4 }}</div></p>{% endif %}
+			{% if lesson.time5 %}<p><div class="time">{{ lesson.time5 }}</div><div class="activity">{{ lesson.activity5 }}</div></p>{% endif %}
+			{% if lesson.time6 %}<p><div class="time">{{ lesson.time6 }}</div><div class="activity">{{ lesson.activity6 }}</div></p>{% endif %}
+			{% if lesson.time7 %}<p><div class="time">{{ lesson.time7 }}</div><div class="activity">{{ lesson.activity7 }}</div></p>{% endif %}
+			{% if lesson.time8 %}<p><div class="time">{{ lesson.time8 }}</div><div class="activity">{{ lesson.activity8 }}</div></p>{% endif %}
+			{% if lesson.time9 %}<p><div class="time">{{ lesson.time9 }}</div><div class="activity">{{ lesson.activity9 }}</div></p>{% endif %}
+			{% if lesson.time10 %}<p><div class="time">{{ lesson.time10 }}</div><div class="activity">{{ lesson.activity10 }}</div></p>{% endif %}
 			<br>
 
 <br>
