@@ -2,3 +2,5 @@ config.py
 db_populate.py
 *.pyc
 *.sql
+fillinmaterials.py
+set_dates.py
